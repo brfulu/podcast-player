@@ -1,0 +1,22 @@
+{
+  "name": "podcast-player",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brfulu/podcast-player.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brfulu/podcast-player/issues"
+  },
+  "homepage": "https://github.com/brfulu/podcast-player#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  }
+}
