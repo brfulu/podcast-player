@@ -1,1 +1,1 @@
-# podcast-player-web
+# podcast-player
