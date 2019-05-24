@@ -34,14 +34,26 @@
       </div>
 
       <ul class="list-unstyled components mt-5">
-        <li class="active">
+        <li>
+          <a href="#"><i class="fas fa-home mr-2"></i>My Podcasts</a>
+        </li>
+        <li>
           <a href="#"><i class="fas fa-search mr-2"></i>Discover</a>
         </li>
-        <li>
-          <a href="#"><i class="fas fa-sign-in-alt mr-2"></i>Login</a>
+        <li class="mt-4">
+          <a href="#"><i class="fas fa-play mr-2"></i>In Progress</a>
+        </li>
+        <li class="active">
+          <a href="#"><i class="fas fa-star mr-2"></i>Starred</a>
         </li>
         <li>
-          <a href="#"><i class="fas fa-user-plus mr-2"></i>Sign up</a>
+          <a href="#"><i class="fas fa-history mr-2"></i>History</a>
+        </li>
+        <li class="mt-4">
+          <a href="#"><i class="fas fa-cog mr-2"></i>Settings</a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-sign-out-alt mr-2"></i>Sign out</a>
         </li>
       </ul>
     </nav>
@@ -62,42 +74,94 @@
       </nav>
 
       <main>
-        <div class="row justify-content-center">
-          <div class="col text-center">
-            <h5>Sign in to your account</h5>
+        <div class="row mb-2">
+          <div class="col pt-1">
+            <h5>Starred</h5>
+          </div>
+          <div class="col">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
+              <div class="input-group-append">
+                <span class="input-group-text" id="basic-addon1"><i class=" fas fa-search mr-1"></i></span>
+              </div>
+            </div>
           </div>
         </div>
         <hr>
         <div class="row">
-          <div class="col-12 ">
-            <form action="">
-              <div class="form-group">
-                <label for="email">Email address</label>
-                <a href="forgot-password.html" class="link float-right">Forgot password?</a>
-                <input type="email" class="form-control" id="email" placeholder="Enter email">
-              </div>
-              <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Enter password">
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="rememberMe">
-                <label class="form-check-label" for="rememberMe">Remember me</label>
-              </div>
-              <div class="form-group mt-4">
-                <a href="my-podcasts.html" class="btn btn-primary btn-block btn-lg border-dark" role="button">Sign in</a>
-              </div>
-            </form>
+          <div class="col-4">
+            <img class="img-fluid" src="assets/blackout.jpg" style="max-height: 100px">
+          </div>
+          <div class="col">
+            <h5>Blackout</h5>
+            <p>Episode
+              <span><i class=" fas fa-star" style="color: gold"></i>
+              </span>
+            </p>
+          </div>
+          <div class="col">
+            <div class="float-right pt-3">
+              <button class="btn btn-success btn-lg">Play</button>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+        <div class="row">
+          <div class="col-4">
+            <img class="img-fluid" src="assets/survival.jpg" style="max-height: 100px">
+          </div>
+          <div class="col">
+            <h5>Survival</h5>
+            <p>Episode
+              <span><i class=" fas fa-star" style="color: gold"></i>
+              </span>
+            </p>
+          </div>
+          <div class="col">
+            <div class="float-right pt-3">
+              <button class="btn btn-success btn-lg">Play</button>
+            </div>
+          </div>
+        </div>
+
+        <hr>
+        <div class="row">
+          <div class="col-4">
+            <img class="img-fluid" src="assets/trump.jpg" style="max-height: 100px">
+          </div>
+          <div class="col">
+            <h5>Trump</h5>
+            <p>Episode
+              <span><i class=" fas fa-star" style="color: gold"></i>
+              </span>
+            </p>
+          </div>
+          <div class="col">
+            <div class="float-right pt-3">
+              <button class="btn btn-success btn-lg">Play</button>
+            </div>
           </div>
         </div>
         <hr>
         <div class="row">
-          <div class="col-12 text-center">
-            <h5>New to PodcastPlayer?</h5>
-            <a href="register.html" class="btn btn-secondary btn-block btn-lg border-dark" role="button">Create new
-              account</a>
+          <div class="col-4">
+            <img class="img-fluid" src="assets/throughline.jpg" style="max-height: 100px">
+          </div>
+          <div class="col-4">
+            <h5>Throughline</h5>
+            <p>Episode
+              <span><i class=" fas fa-star" style="color: gold"></i>
+              </span>
+            </p>
+          </div>
+          <div class="col-4">
+            <div class="float-right pt-3">
+              <button class="btn btn-success btn-lg">Play</button>
+            </div>
           </div>
         </div>
+        <hr>
       </main>
 
     </div>
