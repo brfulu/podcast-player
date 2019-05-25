@@ -38,22 +38,22 @@
           <a href="#"><i class="fas fa-home mr-2"></i>My Podcasts</a>
         </li>
         <li>
-          <a href="#"><i class="fas fa-search mr-2"></i>Discover</a>
+          <a href="discover.html"><i class="fas fa-search mr-2"></i>Discover</a>
         </li>
         <li class="mt-4">
-          <a href="#"><i class="fas fa-play mr-2"></i>In Progress</a>
+          <a href="in-progress.html"><i class="fas fa-play mr-2"></i>In Progress</a>
         </li>
         <li>
-          <a href="#"><i class="fas fa-star mr-2"></i>Starred</a>
+          <a href="starred.html"><i class="fas fa-star mr-2"></i>Starred</a>
         </li>
         <li>
-          <a href="#"><i class="fas fa-history mr-2"></i>History</a>
+          <a href="history.html"><i class="fas fa-history mr-2"></i>History</a>
         </li>
         <li class="mt-4">
-          <a href="#"><i class="fas fa-cog mr-2"></i>Settings</a>
+          <a href="settings.html"><i class="fas fa-cog mr-2"></i>Settings</a>
         </li>
         <li>
-          <a href="#"><i class="fas fa-sign-out-alt mr-2"></i>Sign out</a>
+          <a href="landing.html"><i class="fas fa-sign-out-alt mr-2"></i>Sign out</a>
         </li>
       </ul>
     </nav>
@@ -80,10 +80,16 @@
           </div>
           <div class="col">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
+              <input list="podcasts" type="text" class="form-control" placeholder="Search">
               <div class="input-group-append">
                 <span class="input-group-text" id="basic-addon1"><i class=" fas fa-search mr-1"></i></span>
               </div>
+              <datalist id="podcasts">
+                <option>Blackout</option>
+                <option>Trump</option>
+                <option>Throughline</option>
+                <option>Survival</option>
+              </datalist>
             </div>
           </div>
         </div>
@@ -93,35 +99,36 @@
             <label for="type">Type</label>
             <select class="custom-select" id="type">
               <option selected>All</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option value="1">Interview</option>
+              <option value="2">Solo</option>
+              <option value="3">Non-fiction</option>
+              <option value="3">Sci-fi</option>
             </select>
           </div>
           <div class="col-4">
             <label for="language">Language</label>
             <select class="custom-select" id="language">
               <option selected>All</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option value="1">English</option>
+              <option value="2">Spanish</option>
+              <option value="3">Serbian</option>
+              <option value="3">Italian</option>
             </select>
           </div>
           <div class="col-4">
             <label for="sortBy">Sort by</label>
             <select class="custom-select" id="sortBy">
               <option selected>Year</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option value="1">Title</option>
+              <option value="2">Author</option>
             </select>
           </div>
           <div class="col mt-4">
-            <a href="#" class="btn btn-primary btn-block btn-lg border-dark" role="button">Filter</a>
+            <a href="#" class="btn btn-primary btn-block btn-lg border-dark" role="button" onclick="filter()">Filter</a>
           </div>
         </div>
         <hr>
-        <div class="row">
+        <div class="row" id="blackout">
           <div class="col-4">
             <img class="img-fluid" src="assets/blackout.jpg" style="max-height: 100px">
           </div>
@@ -131,8 +138,8 @@
           </div>
         </div>
 
-        <hr>
-        <div class="row">
+        <hr class="survival">
+        <div class="row survival" id="survival">
           <div class="col-4">
             <img class="img-fluid" src="assets/survival.jpg" style="max-height: 100px">
           </div>
@@ -142,8 +149,8 @@
           </div>
         </div>
 
-        <hr>
-        <div class="row">
+        <hr class="trump">
+        <div class="row trump" id="trump">
           <div class="col-4">
             <img class="img-fluid" src="assets/trump.jpg" style="max-height: 100px">
           </div>
@@ -153,7 +160,7 @@
           </div>
         </div>
         <hr>
-        <div class="row">
+        <div class="row" id="throughline">
           <div class="col-4">
             <img class="img-fluid" src="assets/throughline.jpg" style="max-height: 100px">
           </div>
@@ -162,6 +169,7 @@
             <p>Endevour Audio</p>
           </div>
         </div>
+        <hr>
       </main>
 
     </div>
@@ -180,8 +188,17 @@
     crossorigin="anonymous"></script>
   <!-- jQuery Custom Scroller CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+
   <!-- Custom JS -->
   <script src="js/main.js"></script>
+
+  <script>
+    function filter() {
+      $(".survival").hide();
+      $(".trump").hide();
+    }
+  </script>
 </body>
 
 </html>
