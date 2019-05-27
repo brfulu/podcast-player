@@ -10789,4 +10789,10 @@ hr {
   color: black;
   font-weight: 500;
 }
+
+.player {
+  background-color: #343a40;
+  min-height: 90px;
+  color: white;
+}
 /*# sourceMappingURL=styles.css.map */
