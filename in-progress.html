@@ -80,82 +80,86 @@
           </div>
           <div class="col">
             <div class="input-group">
-              <input list="podcasts" type="text" class="form-control" placeholder="Search" aria-label="Username"
+              <input id="search" type="text" class="form-control" placeholder="Search" aria-label="Username"
                 aria-describedby="basic-addon1">
               <div class="input-group-append">
                 <span class="input-group-text" id="basic-addon1"><i class=" fas fa-search mr-1"></i></span>
               </div>
-              <datalist id="podcasts">
-                <option>Blackout</option>
-                <option>Trump</option>
-                <option>Throughline</option>
-                <option>Survival</option>
-              </datalist>
             </div>
           </div>
         </div>
-        <hr>
-        <div class="row">
-          <div class="col-4">
-            <img class="img-fluid" src="assets/blackout.jpg" style="max-height: 100px">
-          </div>
-          <div class="col">
-            <h5>Blackout</h5>
-            <p>Episode 2</p>
-          </div>
-          <div class="col">
-            <div class="float-right pt-3">
-              <button class="play middle btn btn-success btn-lg rounded float-right"><i class="fa fa-play"></i></button>
+        <div id="blackout">
+          <hr>
+          <div class="row">
+            <div class="col-4">
+              <img class="img-fluid" src="assets/blackout.jpg" style="max-height: 100px">
+            </div>
+            <div class="col">
+              <h5>Blackout</h5>
+              <p>Episode 2</p>
+            </div>
+            <div class="col">
+              <div class="float-right pt-3">
+                <button class="play middle btn btn-success btn-lg rounded float-right"><i class="fa fa-play"></i></button>
+              </div>
             </div>
           </div>
         </div>
 
-        <hr>
-        <div class="row">
-          <div class="col-4">
-            <img class="img-fluid" src="assets/survival.jpg" style="max-height: 100px">
-          </div>
-          <div class="col">
-            <h5>Survival</h5>
-            <p>Episode 3</p>
-          </div>
-          <div class="col">
-            <div class="float-right pt-3">
-              <button class="middle btn btn-success btn-lg rounded float-right"><i class="fa fa-play"></i></button>
+        <div id="survival">
+          <hr>
+          <div class="row">
+            <div class="col-4">
+              <img class="img-fluid" src="assets/survival.jpg" style="max-height: 100px">
+            </div>
+            <div class="col">
+              <h5>Survival</h5>
+              <p>Episode 3</p>
+            </div>
+            <div class="col">
+              <div class="float-right pt-3">
+                <button class="middle btn btn-success btn-lg rounded float-right"><i class="fa fa-play"></i></button>
+              </div>
             </div>
           </div>
         </div>
 
-        <hr>
-        <div class="row">
-          <div class="col-4">
-            <img class="img-fluid" src="assets/trump.jpg" style="max-height: 100px">
-          </div>
-          <div class="col">
-            <h5>Trump</h5>
-            <p>Episode 1</p>
-          </div>
-          <div class="col">
-            <div class="float-right pt-3">
-              <button class="middle btn btn-success btn-lg rounded float-right"><i class="fa fa-play"></i></button>
+        <div id="trump">
+          <hr>
+          <div class="row">
+            <div class="col-4">
+              <img class="img-fluid" src="assets/trump.jpg" style="max-height: 100px">
+            </div>
+            <div class="col">
+              <h5>Trump</h5>
+              <p>Episode 1</p>
+            </div>
+            <div class="col">
+              <div class="float-right pt-3">
+                <button class="middle btn btn-success btn-lg rounded float-right"><i class="fa fa-play"></i></button>
+              </div>
             </div>
           </div>
         </div>
-        <hr>
-        <div class="row">
-          <div class="col-4">
-            <img class="img-fluid" src="assets/throughline.jpg" style="max-height: 100px">
-          </div>
-          <div class="col-4">
-            <h5>Throughline</h5>
-            <p>Episode 4</p>
-          </div>
-          <div class="col-4">
-            <div class="float-right pt-3">
-              <button class="middle btn btn-success btn-lg rounded float-right"><i class="fa fa-play"></i></button>
+
+        <div id="throughline">
+          <hr>
+          <div class="row">
+            <div class="col-4">
+              <img class="img-fluid" src="assets/throughline.jpg" style="max-height: 100px">
+            </div>
+            <div class="col-4">
+              <h5>Throughline</h5>
+              <p>Episode 4</p>
+            </div>
+            <div class="col-4">
+              <div class="float-right pt-3">
+                <button class="middle btn btn-success btn-lg rounded float-right"><i class="fa fa-play"></i></button>
+              </div>
             </div>
           </div>
         </div>
+
         <hr>
       </main>
 
@@ -205,6 +209,20 @@
     $(".play").on("click", function (e) {
       $(".footer").show();
     });
+
+    var podcasts = [$("#blackout"), $("#survival"), $("#trump"), $("#throughline")]
+
+    $("#search").keyup(function (e) {
+      var val = e.target.value;
+      for (var i = 0; i < podcasts.length; i++) {
+        if (podcasts[i].attr("id").startsWith(val)) {
+          podcasts[i].show();
+        } else {
+          podcasts[i].hide();
+        }
+      }
+    });
+
   </script>
 </body>
 

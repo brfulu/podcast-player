@@ -80,17 +80,17 @@
           </div>
           <div class="col">
             <div class="input-group">
-              <input list="podcasts" type="text" class="form-control" placeholder="Search">
+              <input id="search" list="podcasts" type="text" class="form-control" placeholder="Search">
               <div class="input-group-append">
                 <span class="input-group-text" id="basic-addon1"><i class=" fas fa-search mr-1"></i></span>
               </div>
-              <datalist id="podcasts">
-                <option>Blackout</option>
-                <option>Trump</option>
-                <option>Throughline</option>
-                <option>Survival</option>
-              </datalist>
             </div>
+            <datalist id="podcasts">
+              <option>Blackout</option>
+              <option>Trump</option>
+              <option>Throughline</option>
+              <option>Survival</option>
+            </datalist>
           </div>
         </div>
         <hr>
@@ -198,6 +198,17 @@
       $(".survival").hide();
       $(".trump").hide();
     }
+
+    $("#search").change(function (e) {
+      var val = e.target.value;
+      var opts = document.getElementById("podcasts").childNodes;
+      for (var i = 0; i < opts.length; i++) {
+        if (opts[i].value === val) {
+          window.location.href = "podcast.html";
+          break;
+        }
+      }
+    });
   </script>
 </body>
 
