@@ -10778,6 +10778,7 @@ hr {
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 0px;
+  border-color: #343a40;
 }
 
 .middle {
@@ -10794,5 +10795,14 @@ hr {
   background-color: #343a40;
   min-height: 90px;
   color: white;
+}
+
+.jumbotron {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#343a40), to(#cd6121)) !important;
+  background-image: linear-gradient(to top, #343a40, #cd6121) !important;
+}
+
+#logo {
+  color: #6c757d !important;
 }
 /*# sourceMappingURL=styles.css.map */

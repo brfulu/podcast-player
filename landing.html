@@ -51,7 +51,7 @@
 
     <!-- Page Content -->
     <div id="content" class="container-fluid">
-      <nav class="navbar navbar-dark bg-dark">
+      <nav class="navbar navbar-dark bg-dark mb-0">
         <button id="sidebarCollapse" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -65,24 +65,29 @@
       </nav>
 
       <main>
-        <div class="row justify-content-center">
-          <div class="col-12 text-center">
-            <i class=" fas fa-play-circle fa-7x mr-1"></i>
-            <h5 class="mt-4">Welcome to PodcastPlayer</h5>
-            <p class="text-dark">
-              Discover your favorite podacsts. Listen to them on demand. Browse our rich catalog to find best podcasts.
-            </p>
+        <div class="jumbotron min-vh-100 text-center m-0 bg-primary d-flex flex-column rounded-0">
+          <div class="row justify-content-center mt-3">
+            <div class="col-12 col-lg-4 text-center">
+              <i class="text-dark fas fa-play-circle fa-7x mr-1"></i>
+              <h5 class="mt-4 text-white">Welcome to PodcastPlayer</h5>
+              <p class="text-white mt-3">
+                Discover your favorite podacsts. Listen to them on demand. Browse our rich catalog to find best
+                podcasts.
+              </p>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-3 text-center mt-5 orange">
+              <a href="register.html" class="btn btn-primary btn-block btn-lg border-dark" role="button">Create new
+                account</a>
+            </div>
+            <div class="col-12 col-lg-3 text-center mt-5">
+              <a href="signin.html" class="btn btn-primary btn-block btn-lg border-dark" role="button">Sign in</a>
+            </div>
           </div>
         </div>
-        <div class="row justify-content-center">
-          <div class="col-12 text-center mt-5 orange">
-            <a href="register.html" class="btn btn-primary btn-block btn-lg border-dark" role="button">Create new
-              account</a>
-          </div>
-          <div class="col-12 text-center mt-4">
-            <a href="signin.html" class="btn btn-primary btn-block btn-lg border-dark" role="button">Sign in</a>
-          </div>
-        </div>
+
+
       </main>
     </div>
     <!-- Dark Overlay element -->

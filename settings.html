@@ -92,7 +92,7 @@
             </ul>
             <div class="tab-content" id="myTabContent">
               <div class="tab-pane fade show active" id="playback" role="tabpanel" aria-labelledby="playback-tab">
-                <form class="form mt-3">
+                <form class="form mt-4">
                   <div class="form-group mb-2">
                     <label for="skipForwards">Skip Forwards</label>
                     <select class="custom-select" id="skipForwards">
@@ -137,7 +137,31 @@
                 </form>
               </div>
               <div class="tab-pane fade" id="account" role="tabpanel" aria-labelledby="account-tab">
-                <form class="form mt-3">
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Enter password to confirm</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="form-group">
+                          <label for="password">Password</label>
+                          <input type="password" class="form-control" id="password" value="ovojesifra">
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-success">Confirm</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-4">
                   <div class="form-group">
                     <label for="email">Email address</label>
                     <input type="email" class="form-control" id="email" value="bfulurija16@raf.rs">
@@ -147,13 +171,14 @@
                     <input type="password" class="form-control" id="password" value="ovojesifra">
                   </div>
                   <div class="form-group">
-                    <button type="submit" class="btn btn-block btn-lg btn-primary">Save changes</button>
-
+                    <button class="btn btn-block btn-lg btn-primary" data-toggle="modal" data-target="#exampleModal">Save
+                      changes</button>
                   </div>
-                </form>
+                </div>
+
               </div>
               <div class="tab-pane fade" id="stats" role="tabpanel" aria-labelledby="stats-tab">
-                <form class="mt-3">
+                <form class="mt-4">
                   <div class="form-group row">
                     <label for="listenningTime" class="col-7 col-form-label">Listenning time:</label>
                     <div class="col">
