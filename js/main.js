@@ -1,4 +1,18 @@
 $(document).ready(function () {
+  var viewportWidth = $(window).width();
+  if (viewportWidth > 990) {
+    $("#sidebar").addClass("active");
+  }
+
+  $(window).resize(function () {
+    var viewportWidth = $(window).width();
+    if (viewportWidth > 990) {
+      $("#sidebar").removeClass("active").addClass("active");
+    } else {
+      $("#sidebar").removeClass("active");
+    }
+  });
+
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
   })

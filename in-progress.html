@@ -35,7 +35,7 @@
 
       <ul class="list-unstyled components mt-5">
         <li>
-          <a href="#"><i class="fas fa-home mr-2"></i>My Podcasts</a>
+          <a href="my-podcasts.html"><i class="fas fa-home mr-2"></i>My Podcasts</a>
         </li>
         <li>
           <a href="discover.html"><i class="fas fa-search mr-2"></i>Discover</a>
@@ -75,10 +75,10 @@
 
       <main>
         <div class="row mb-2">
-          <div class="col pt-1">
+          <div class="col offset-lg-2 pt-1">
             <h5>In Progress</h5>
           </div>
-          <div class="col">
+          <div class="col col-lg-3">
             <div class="input-group">
               <input id="search" type="text" class="form-control" placeholder="Search" aria-label="Username"
                 aria-describedby="basic-addon1">
@@ -89,9 +89,9 @@
           </div>
         </div>
         <div id="blackout">
-          <hr>
+          <hr class="offset-lg-2">
           <div class="row">
-            <div class="col-4">
+            <div class="col-4 col-lg-1 offset-lg-2">
               <img class="img-fluid" src="assets/blackout.jpg" style="max-height: 100px">
             </div>
             <div class="col">
@@ -107,9 +107,9 @@
         </div>
 
         <div id="survival">
-          <hr>
+          <hr class="offset-lg-2">
           <div class="row">
-            <div class="col-4">
+            <div class="col-4 col-lg-1 offset-lg-2">
               <img class="img-fluid" src="assets/survival.jpg" style="max-height: 100px">
             </div>
             <div class="col">
@@ -125,9 +125,9 @@
         </div>
 
         <div id="trump">
-          <hr>
+          <hr class="offset-lg-2">
           <div class="row">
-            <div class="col-4">
+            <div class="col-4 col-lg-1 offset-lg-2">
               <img class="img-fluid" src="assets/trump.jpg" style="max-height: 100px">
             </div>
             <div class="col">
@@ -143,16 +143,16 @@
         </div>
 
         <div id="throughline">
-          <hr>
+          <hr class="offset-lg-2">
           <div class="row">
-            <div class="col-4">
+            <div class="col-4 col-lg-1 offset-lg-2">
               <img class="img-fluid" src="assets/throughline.jpg" style="max-height: 100px">
             </div>
             <div class="col-4">
               <h5>Throughline</h5>
               <p>Episode 4</p>
             </div>
-            <div class="col-4">
+            <div class="col">
               <div class="float-right pt-3">
                 <button class="middle btn btn-success btn-lg rounded float-right"><i class="fa fa-play"></i></button>
               </div>
@@ -160,27 +160,31 @@
           </div>
         </div>
 
-        <hr>
+        <hr class="offset-lg-2">
       </main>
 
       <footer class="footer fixed-bottom player row" style="display: none">
-        <div class="col middle mr-0">
+        <div class="col col-lg-1 middle mr-0">
           <img src="assets/blackout.jpg" class="img-fluid" style="max-height: 70px">
         </div>
-        <div class="col middle pl-0 pr-0">
+        <div class="col col-lg-1 middle pl-0 pr-0">
           <i class="fas fa-pause fa-2x"></i>
         </div>
-        <div class="col-4 pl-0 pr-0 middle">
+        <div class="col-4 col-lg-7 pl-0 pr-0 middle">
           <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3">
 
         </div>
-        <div class="col middle pl-3 pr-0">
-          <select class="custom-select">
-            <option>1x</option>
+        <div class="col col-lg-1 offset-lg-1 middle pl-3 pr-0" style="max-width: 100px">
+          <select class="custom-select float-right">
+            <option>2x</option>
+            <option>1.75x</option>
+            <option>1.5x</option>
+            <option>1.25x</option>
+            <option selected>1x</option>
           </select>
         </div>
-        <div class="col middle pr-0">
-          <a href="player.html">
+        <div class="col col-lg-1 middle pr-0">
+          <a href="player.html" class="float-right mr-2">
             <i class="fas fa-expand-arrows-alt fa-2x"></i>
           </a>
         </div>

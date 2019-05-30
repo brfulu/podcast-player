@@ -75,10 +75,10 @@
 
       <main>
         <div class="row">
-          <div class="col pt-1">
+          <div class="col offset-lg-2 pt-1">
             <h5>My Podcasts</h5>
           </div>
-          <div class="col">
+          <div class="col col-lg-3 offset-lg-2">
             <div class="input-group">
               <input id="search" list="podcasts" type="text" class="form-control" placeholder="Search">
               <div class="input-group-append">
@@ -93,9 +93,9 @@
             </datalist>
           </div>
         </div>
-        <hr>
+        <hr class="offset-lg-2">
         <div class="row">
-          <div class="col-4">
+          <div class="col-4 col-lg-2 offset-lg-3">
             <label for="type">Type</label>
             <select class="custom-select" id="type">
               <option selected>All</option>
@@ -105,7 +105,7 @@
               <option value="3">Sci-fi</option>
             </select>
           </div>
-          <div class="col-4">
+          <div class="col-4 col-lg-2">
             <label for="language">Language</label>
             <select class="custom-select" id="language">
               <option selected>All</option>
@@ -115,7 +115,7 @@
               <option value="3">Italian</option>
             </select>
           </div>
-          <div class="col-4">
+          <div class="col-4 col-lg-2">
             <label for="sortBy">Sort by</label>
             <select class="custom-select" id="sortBy">
               <option selected>Year</option>
@@ -123,13 +123,14 @@
               <option value="2">Author</option>
             </select>
           </div>
-          <div class="col mt-4">
+          <div class="col col-lg-2 mt-4 ">
             <a href="#" class="btn btn-primary btn-block btn-lg border-dark" role="button" onclick="filter()">Filter</a>
           </div>
         </div>
-        <hr>
+
+        <hr class="mt-4 offset-lg-2">
         <div class="row" id="blackout">
-          <div class="col-4">
+          <div class="col-4 col-lg-1 offset-lg-2">
             <img class="img-fluid" src="assets/blackout.jpg" style="max-height: 100px">
           </div>
           <div class="col">
@@ -138,9 +139,9 @@
           </div>
         </div>
 
-        <hr class="survival">
+        <hr class="survival offset-lg-2">
         <div class="row survival" id="survival">
-          <div class="col-4">
+          <div class="col-4 col-lg-1 offset-lg-2">
             <img class="img-fluid" src="assets/survival.jpg" style="max-height: 100px">
           </div>
           <div class="col">
@@ -149,9 +150,9 @@
           </div>
         </div>
 
-        <hr class="trump">
+        <hr class="trump offset-lg-2">
         <div class="row trump" id="trump">
-          <div class="col-4">
+          <div class="col-4 col-lg-1 offset-lg-2">
             <img class="img-fluid" src="assets/trump.jpg" style="max-height: 100px">
           </div>
           <div class="col">
@@ -159,9 +160,9 @@
             <p>Endevour Audio</p>
           </div>
         </div>
-        <hr>
+        <hr class="offset-lg-2">
         <div class="row" id="throughline">
-          <div class="col-4">
+          <div class="col-4 col-lg-1 offset-lg-2">
             <img class="img-fluid" src="assets/throughline.jpg" style="max-height: 100px">
           </div>
           <div class="col">
@@ -169,7 +170,7 @@
             <p>Endevour Audio</p>
           </div>
         </div>
-        <hr>
+        <hr class="offset-lg-2">
       </main>
 
     </div>
