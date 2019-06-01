@@ -73,12 +73,12 @@
         </div>
       </nav>
 
-      <main>
+      <main class="col col-lg-10 offset-lg-2">
         <div class="row mb-2">
           <div class="col pt-1">
             <h5>Starred</h5>
           </div>
-          <div class="col">
+          <div class="col col-lg-3">
             <div class="input-group">
               <input id="search" type="text" class="form-control" placeholder="Search" aria-label="Username"
                 aria-describedby="basic-addon1">
@@ -104,7 +104,7 @@
             </div>
             <div class="col">
               <div class="float-right pt-3">
-                <button class="middle btn btn-success btn-lg rounded float-right"><i class="fa fa-play"></i></button>
+                <button class="play middle btn btn-success btn-lg rounded float-right"><i class="fa fa-play"></i></button>
               </div>
             </div>
           </div>
@@ -125,7 +125,7 @@
             </div>
             <div class="col">
               <div class="float-right pt-3">
-                <button class="middle btn btn-success btn-lg rounded float-right"><i class="fa fa-play"></i></button>
+                <button class="play middle btn btn-success btn-lg rounded float-right"><i class="fa fa-play"></i></button>
               </div>
             </div>
           </div>
@@ -176,6 +176,33 @@
         <hr>
       </main>
 
+      <footer class="footer fixed-bottom player row" style="display: none">
+        <div class="col col-lg-1 middle mr-0">
+          <img src="assets/blackout.jpg" class="img-fluid" style="max-height: 70px">
+        </div>
+        <div class="col col-lg-1 middle pl-0 pr-0">
+          <i class="fas fa-pause fa-2x"></i>
+        </div>
+        <div class="col-4 col-lg-7 pl-0 pr-0 middle">
+          <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3">
+
+        </div>
+        <div class="col col-lg-1 offset-lg-1 middle pl-3 pr-0" style="max-width: 100px">
+          <select class="custom-select float-right">
+            <option>2x</option>
+            <option>1.75x</option>
+            <option>1.5x</option>
+            <option>1.25x</option>
+            <option selected>1x</option>
+          </select>
+        </div>
+        <div class="col col-lg-1 middle pr-0">
+          <a href="player.html" class="float-right mr-2">
+            <i class="fas fa-expand-arrows-alt fa-2x"></i>
+          </a>
+        </div>
+
+      </footer>
     </div>
     <!-- Dark Overlay element -->
     <div class="overlay"></div>
@@ -196,6 +223,9 @@
   <script src="js/main.js"></script>
 
   <script>
+    $(".play").on("click", function (e) {
+      $(".footer").show();
+    });
 
     var podcasts = [$("#blackout"), $("#survival"), $("#trump"), $("#throughline")]
 
