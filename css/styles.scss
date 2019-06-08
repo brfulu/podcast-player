@@ -61,10 +61,10 @@ a:focus {
 ----------------------------------------------------- */
 
 #sidebar {
-    width: 250px;
+    width: 256px;
     position: fixed;
     top: 0;
-    left: -250px;
+    left: -256px;
     height: 100vh;
     z-index: 999;
     background: $gray-700;
@@ -319,4 +319,9 @@ hr {
         visibility: visible;
     }
 
+}
+
+
+footer {
+  height: 40px !important;
 }
