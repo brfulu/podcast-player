@@ -60,7 +60,7 @@
 
     <!-- Page Content -->
     <div id="content" class="container-fluid">
-      <nav class="navbar navbar-dark bg-dark">
+      <nav class="navbar navbar-dark bg-dark" id="navbar">
         <button id="sidebarCollapse" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -73,12 +73,12 @@
         </div>
       </nav>
 
-      <main>
+      <main class="col col-lg-10 offset-lg-2">
         <div class="row">
-          <div class="col offset-lg-2 pt-1">
+          <div class="col pt-1">
             <h5>My Podcasts</h5>
           </div>
-          <div class="col col-lg-3 offset-lg-2">
+          <div class="col col-lg-3">
             <div class="input-group">
               <input id="search" list="podcasts" type="text" class="form-control" placeholder="Search">
               <div class="input-group-append">
@@ -93,9 +93,9 @@
             </datalist>
           </div>
         </div>
-        <hr class="offset-lg-2">
+        <hr class="">
         <div class="row">
-          <div class="col-4 col-lg-2 offset-lg-3">
+          <div class="col-4 col-lg-2 offset-lg-2">
             <label for="type">Type</label>
             <select class="custom-select" id="type">
               <option selected>All</option>
@@ -128,9 +128,9 @@
           </div>
         </div>
 
-        <hr class="mt-4 offset-lg-2">
+        <hr class="mt-4">
         <div class="row" id="blackout">
-          <div class="col-4 col-lg-1 offset-lg-2">
+          <div class="col-4 col-lg-1">
             <img class="img-fluid" src="assets/blackout.jpg" style="max-height: 100px">
           </div>
           <div class="col">
@@ -139,9 +139,9 @@
           </div>
         </div>
 
-        <hr class="survival offset-lg-2">
+        <hr class="survival">
         <div class="row survival" id="survival">
-          <div class="col-4 col-lg-1 offset-lg-2">
+          <div class="col-4 col-lg-1">
             <img class="img-fluid" src="assets/survival.jpg" style="max-height: 100px">
           </div>
           <div class="col">
@@ -150,9 +150,9 @@
           </div>
         </div>
 
-        <hr class="trump offset-lg-2">
+        <hr class="trump">
         <div class="row trump" id="trump">
-          <div class="col-4 col-lg-1 offset-lg-2">
+          <div class="col-4 col-lg-1">
             <img class="img-fluid" src="assets/trump.jpg" style="max-height: 100px">
           </div>
           <div class="col">
@@ -160,9 +160,9 @@
             <p>Endevour Audio</p>
           </div>
         </div>
-        <hr class="offset-lg-2">
+        <hr class="">
         <div class="row" id="throughline">
-          <div class="col-4 col-lg-1 offset-lg-2">
+          <div class="col-4 col-lg-1">
             <img class="img-fluid" src="assets/throughline.jpg" style="max-height: 100px">
           </div>
           <div class="col">
@@ -170,7 +170,7 @@
             <p>Endevour Audio</p>
           </div>
         </div>
-        <hr class="offset-lg-2">
+        <hr class="">
       </main>
 
     </div>
