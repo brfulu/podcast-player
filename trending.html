@@ -20,7 +20,29 @@
 </head>
 
 <body>
+  <!-- Modal -->
+  <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Unsubscribe</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Are you really sure?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary cancel" data-dismiss="modal">No, cancel</button>
+          <button type="button" class="btn btn-danger ok">Yes, confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="wrapper">
+
     <!-- Sidebar -->
     <nav id="sidebar">
 
@@ -172,14 +194,21 @@
   <script src="js/main.js"></script>
 
   <script>
+
     $(".subscribe").on("click", function (e) {
       var button = e.target;
-      button.classList.toggle("btn-success");
-      button.classList.toggle("btn-danger");
-      if (button.innerHTML === "Subscribe") {
+      if (button.innerHTML == "Subscribe") {
         button.innerHTML = "Unsbuscribe";
+        button.classList.remove("btn-success");
+        button.classList.add("btn-danger");
       } else {
-        button.innerHTML = "Subscribe";
+        $('#confirmModal').modal('show');
+        $('#confirmModal button.ok').off().on('click', function () {
+          $('#confirmModal').modal('hide');
+          button.innerHTML = "Subscribe";
+          button.classList.remove("btn-danger");
+          button.classList.add("btn-success");
+        });
       }
     });
   </script>
