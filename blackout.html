@@ -226,7 +226,9 @@
           <img src="assets/blackout.jpg" class="img-fluid" style="max-height: 70px">
         </div>
         <div class="col col-lg-1 middle pl-0 pr-0">
-          <i class="fas fa-pause fa-2x"></i>
+          <a id="play-pause">
+            <i id="play-pause-icon" class="fas fa-pause fa-2x"></i>
+          </a>
         </div>
         <div class="col-4 col-lg-7 pl-0 pr-0 middle">
           <input type="range" class="custom-range" min="0" max="5" step="0.5" id="customRange3">
@@ -242,7 +244,7 @@
           </select>
         </div>
         <div class="col col-lg-1 middle pr-0">
-          <a href="player.html" class="float-right mr-2">
+          <a href="player2.html" class="float-right mr-2">
             <i class="fas fa-expand-arrows-alt fa-2x"></i>
           </a>
         </div>
@@ -296,6 +298,12 @@
         }
       }
     });
+
+    $("#play-pause").on("click", function (e) {
+      var icon = $("#play-pause-icon").first();
+      icon.toggleClass("fa-pause");
+      icon.toggleClass("fa-play")
+    })
   </script>
 </body>
 

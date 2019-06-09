@@ -71,11 +71,18 @@
           </div>
           <div class="col-8 col-lg-4 text-center justify-content-center mt-2">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
+              <input id="search" list="podcasts" type="text" class="form-control" placeholder="Search" aria-label="Username"
+                aria-describedby="basic-addon1">
               <div class="input-group-append">
                 <span class="input-group-text" id="basic-addon1"><i class=" fas fa-search mr-1"></i></span>
               </div>
             </div>
+            <datalist id="podcasts">
+              <option value="blackout">Blackout</option>
+              <option>Trump</option>
+              <option>Throughline</option>
+              <option>Survival</option>
+            </datalist>
           </div>
         </div>
 
@@ -84,7 +91,7 @@
             <h5>Popular</h5>
           </div>
           <div class="col">
-            <a href="#" class="link float-right">See all</a>
+            <a href="popular.html" class="link float-right">See all</a>
           </div>
           <div class="col-12">
             <hr>
@@ -95,14 +102,18 @@
             <div id="carouselExample1" class="carousel slide" data-ride="carousel" data-interval="9000">
               <div class="carousel-inner row w-100 mx-auto" role="listbox">
                 <div class="carousel-item col-md-3 active text-center">
-                  <h5>Blackout</h5>
-                  <img class="img-fluid mx-auto d-block" src="assets/blackout.jpg" alt="slide 1">
-                  <p>Endevour Audio</p>
+                  <a href="blackout.html">
+                    <h5>Blackout</h5>
+                    <img class="img-fluid mx-auto d-block" src="assets/blackout.jpg" alt="slide 1">
+                    <p>Endevour Audio</p>
+                  </a>
                 </div>
                 <div class="carousel-item col-md-3 text-center">
-                  <h5>Articles of interest</h5>
-                  <img class="img-fluid mx-auto d-block" src="assets/articlesofinterest.jpg" alt="slide 2">
-                  <p>Endevour Audio</p>
+                  <a href="articlesofinterest.html">
+                    <h5>Articles of interest</h5>
+                    <img class="img-fluid mx-auto d-block" src="assets/articlesofinterest.jpg" alt="slide 2">
+                    <p>Endevour Audio</p>
+                  </a>
                 </div>
                 <div class="carousel-item col-md-3 text-center">
                   <h5>Mission to Zyxx</h5>
@@ -152,7 +163,7 @@
             <h5>Trending</h5>
           </div>
           <div class="col">
-            <a href="#" class="link float-right">See all</a>
+            <a href="trending.html" class="link float-right">See all</a>
           </div>
           <div class="col-12">
             <hr>
@@ -210,7 +221,7 @@
             <h5>New Releases</h5>
           </div>
           <div class="col">
-            <a href="#" class="link float-right">See all</a>
+            <a href="new-releases.html" class="link float-right">See all</a>
           </div>
           <div class="col-12">
             <hr>
@@ -282,6 +293,21 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
   <!-- Custom JS -->
   <script src="js/main.js"></script>
+
+  <script>
+    $("#search").change(function (e) {
+      var val = e.target.value;
+      var opts = document.getElementById("podcasts").childNodes;
+      for (var i = 0; i < opts.length; i++) {
+        if (opts[i].value === val) {
+          window.location.href = "podcast.html";
+          break;
+        }
+      }
+    });
+
+
+  </script>
 </body>
 
 </html>
