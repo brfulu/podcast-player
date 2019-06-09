@@ -61,10 +61,10 @@ a:focus {
 ----------------------------------------------------- */
 
 #sidebar {
-    width: 256px;
+    width: 245px;
     position: fixed;
     top: 0;
-    left: -256px;
+    left: -245px;
     height: 100vh;
     z-index: 999;
     background: $gray-700;
@@ -242,6 +242,7 @@ hr {
 
 .jumbotron {
     background-image: linear-gradient(to top, $dark, $primary) !important;
+    width: 100%;
 }
 
 #logo {
@@ -324,4 +325,12 @@ hr {
 
 footer {
   height: 40px !important;
+}
+
+.fa-chevron-right {
+  margin-left: 35px;
+}
+
+.fa-chevron-left {
+  margin-right: 35px;
 }

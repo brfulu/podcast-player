@@ -10615,10 +10615,10 @@ a:focus {
     SIDEBAR STYLE
 ----------------------------------------------------- */
 #sidebar {
-  width: 256px;
+  width: 245px;
   position: fixed;
   top: 0;
-  left: -256px;
+  left: -245px;
   height: 100vh;
   z-index: 999;
   background: #495057;
@@ -10800,6 +10800,7 @@ hr {
 .jumbotron {
   background-image: -webkit-gradient(linear, left bottom, left top, from(#343a40), to(#cd6121)) !important;
   background-image: linear-gradient(to top, #343a40, #cd6121) !important;
+  width: 100%;
 }
 
 #logo {
@@ -10875,5 +10876,13 @@ hr {
 
 footer {
   height: 40px !important;
+}
+
+.fa-chevron-right {
+  margin-left: 35px;
+}
+
+.fa-chevron-left {
+  margin-right: 35px;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -88,7 +88,8 @@
                   <i class="fas fa-question-circle"></i>
                 </button>
 
-                <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+                <input minlength="6" type="password" class="form-control" id="password" placeholder="Enter password"
+                  required>
               </div>
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" value="" id="showPassword">
@@ -128,6 +129,17 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
   <!-- Custom JS -->
   <script src="js/main.js"></script>
+
+  <script>
+    $("#showPassword").change(function () {
+      var password = $("#password").first();
+      if (password.attr("type") == "password") {
+        password.attr("type", "text");
+      } else {
+        password.attr("type", "password");
+      }
+    });
+  </script>
 </body>
 
 </html>
