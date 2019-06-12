@@ -91,7 +91,8 @@
               </div>
             </div>
             <datalist id="podcasts">
-              <option value="blackout">Blackout</option>
+              <option>Blackout</option>
+              <option>Articles of interest</option>
               <option>Trump</option>
               <option>Throughline</option>
               <option>Survival</option>
@@ -325,7 +326,7 @@
       var opts = document.getElementById("podcasts").childNodes;
       for (var i = 0; i < opts.length; i++) {
         if (opts[i].value === val) {
-          window.location.href = "podcast.html";
+          window.location.href = val.toLowerCase().replace(/\s+/g, '') + ".html";
           break;
         }
       }
