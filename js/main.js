@@ -48,7 +48,7 @@ $(document).ready(function () {
     var $e = $(e.relatedTarget);
     var idx = $e.index();
     var itemsPerSlide = 4;
-    var totalItems = 8;
+    var totalItems = 10;
 
     if (idx >= totalItems - (itemsPerSlide - 1)) {
       var it = itemsPerSlide - (totalItems - idx);
